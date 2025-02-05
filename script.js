@@ -27,8 +27,7 @@ function startTest() {
         alert("Please select a timer value.");
         return;
     }
-    startButton.style.display = "none";
-    timerDropdown.style.display = "none";
+    document.getElementById("startContainer").style.display = "none";
     questionContainer.style.display = "block";
     loadQuestion();
     startTimer(selectedTime);
@@ -71,7 +70,7 @@ function startTimer(duration) {
 
 function updateTimerDisplay(timeLeft) {
     const timerElement = document.getElementById("timer");
-    timerElement.textContent = `Time Left: ${timeLeft}s`;
+    timerElement.textContent = `${timeLeft}s`;
 }
 
 function handleNextQuestion() {
