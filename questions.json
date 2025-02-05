@@ -1,62 +1,72 @@
 [
     {
-        "question": "What is the most common cause of acute appendicitis?",
-        "options": ["A. Viral infection", "B. Faecolith", "C. Worm infestation", "D. Lymphoid hyperplasia"],
-        "correctAnswer": "B. Faecolith",
+        "question": "A 60-year-old man presents with weight loss, dysphagia, and a palpable supraclavicular lymph node. Esophagogastroduodenoscopy reveals a mass in the lower esophagus. Which lymph node metastasis is most likely?",
+        "options": ["A. Virchow’s node", "B. Celiac lymph node", "C. Para-aortic lymph node", "D. Axillary lymph node"],
+        "correctAnswer": "A. Virchow’s node",
         "userAnswer": null
     },
     {
-        "question": "What is the preferred initial treatment for a patient with tension pneumothorax?",
-        "options": ["A. Needle decompression", "B. Chest tube placement", "C. Oxygen therapy", "D. Surgery"],
-        "correctAnswer": "A. Needle decompression",
+        "question": "Which of the following is NOT a component of Ranson's criteria for assessing the severity of acute pancreatitis?",
+        "options": ["A. Age >55 years", "B. White blood cell count >16,000/mm³", "C. Serum calcium <8 mg/dL", "D. Serum amylase >1,000 IU/L"],
+        "correctAnswer": "D. Serum amylase >1,000 IU/L",
         "userAnswer": null
     },
     {
-        "question": "Which of the following is a feature of intestinal obstruction?",
-        "options": ["A. Hematemesis", "B. Colicky abdominal pain", "C. Jaundice", "D. Dysphagia"],
-        "correctAnswer": "B. Colicky abdominal pain",
+        "question": "In a patient with upper gastrointestinal bleeding due to varices, what is the best method to prevent rebleeding after endoscopic therapy?",
+        "options": ["A. Proton pump inhibitors", "B. Octreotide infusion", "C. Transjugular intrahepatic portosystemic shunt (TIPS)", "D. Beta-blockers"],
+        "correctAnswer": "C. Transjugular intrahepatic portosystemic shunt (TIPS)",
         "userAnswer": null
     },
     {
-        "question": "Which hernia is located below the inguinal ligament?",
-        "options": ["A. Direct inguinal hernia", "B. Indirect inguinal hernia", "C. Femoral hernia", "D. Epigastric hernia"],
-        "correctAnswer": "C. Femoral hernia",
+        "question": "A 35-year-old male presents with abdominal pain, fever, and jaundice. Imaging reveals a stone in the common bile duct. Which of the following procedures is the best initial management?",
+        "options": ["A. Open choledocholithotomy", "B. Laparoscopic cholecystectomy", "C. Endoscopic retrograde cholangiopancreatography (ERCP)", "D. Percutaneous transhepatic cholangiography"],
+        "correctAnswer": "C. Endoscopic retrograde cholangiopancreatography (ERCP)",
         "userAnswer": null
     },
     {
-        "question": "What is the hallmark finding in acute mesenteric ischemia?",
-        "options": ["A. Severe abdominal pain out of proportion to physical findings", "B. Guarding and rigidity", "C. Jaundice", "D. Ascites"],
-        "correctAnswer": "A. Severe abdominal pain out of proportion to physical findings",
+        "question": "A 45-year-old man undergoes surgery for pheochromocytoma. Which of the following is the most critical preoperative step?",
+        "options": ["A. Hydration with normal saline", "B. Administration of beta-blockers", "C. Alpha-adrenergic blockade", "D. Corticosteroid supplementation"],
+        "correctAnswer": "C. Alpha-adrenergic blockade",
         "userAnswer": null
     },
     {
-        "question": "What is the most common site of carcinoma in the colon?",
-        "options": ["A. Cecum", "B. Ascending colon", "C. Rectosigmoid colon", "D. Transverse colon"],
-        "correctAnswer": "C. Rectosigmoid colon",
+        "question": "Which of the following is the most reliable indicator of ischemia during bowel resection for mesenteric ischemia?",
+        "options": ["A. Lack of peristalsis", "B. Cyanotic appearance of the bowel", "C. Absence of Doppler signals in the mesenteric vessels", "D. Mucosal bleeding upon palpation"],
+        "correctAnswer": "C. Absence of Doppler signals in the mesenteric vessels",
         "userAnswer": null
     },
     {
-        "question": "What is the classic triad of symptoms in cholangitis (Charcot’s triad)?",
-        "options": ["A. Fever, jaundice, abdominal pain", "B. Jaundice, vomiting, dyspepsia", "C. Abdominal pain, weight loss, diarrhea", "D. Fever, dysphagia, nausea"],
-        "correctAnswer": "A. Fever, jaundice, abdominal pain",
+        "question": "Which of the following statements is true regarding gallbladder carcinoma?",
+        "options": [
+            "A. It is more common in males than females.",
+            "B. Porcelain gallbladder increases the risk of gallbladder carcinoma.",
+            "C. Adenocarcinoma is the rarest histological subtype.",
+            "D. Gallbladder carcinoma is associated with H. pylori infection."
+        ],
+        "correctAnswer": "B. Porcelain gallbladder increases the risk of gallbladder carcinoma.",
         "userAnswer": null
     },
     {
-        "question": "Which of the following is true about basal cell carcinoma?",
-        "options": ["A. Commonly metastasizes", "B. Occurs in sun-protected areas", "C. Has a pearly appearance", "D. Is primarily treated with chemotherapy"],
-        "correctAnswer": "C. Has a pearly appearance",
+        "question": "What is the most common presentation of a gastric volvulus?",
+        "options": [
+            "A. Severe epigastric pain with coffee-ground emesis",
+            "B. Dysphagia with hematemesis",
+            "C. Triad of severe pain, retching without vomiting, and inability to pass an NG tube",
+            "D. Abdominal distension and constipation"
+        ],
+        "correctAnswer": "C. Triad of severe pain, retching without vomiting, and inability to pass an NG tube",
         "userAnswer": null
     },
     {
-        "question": "What is the best imaging modality for diagnosing a biliary obstruction?",
-        "options": ["A. Plain X-ray", "B. Ultrasound", "C. CT scan", "D. MRI"],
-        "correctAnswer": "B. Ultrasound",
+        "question": "A patient develops hypotension and tachycardia 2 hours after undergoing a splenectomy. Which of the following is the most likely cause?",
+        "options": ["A. Pulmonary embolism", "B. Intra-abdominal hemorrhage", "C. Post-splenectomy sepsis", "D. Hemolytic anemia"],
+        "correctAnswer": "B. Intra-abdominal hemorrhage",
         "userAnswer": null
     },
     {
-        "question": "What is the first-line treatment for a bleeding duodenal ulcer?",
-        "options": ["A. Endoscopic therapy", "B. Surgery", "C. Proton pump inhibitors", "D. Angiographic embolization"],
-        "correctAnswer": "A. Endoscopic therapy",
+        "question": "Which type of thyroid cancer is associated with the RET proto-oncogene mutation and often presents with elevated calcitonin levels?",
+        "options": ["A. Papillary thyroid carcinoma", "B. Follicular thyroid carcinoma", "C. Medullary thyroid carcinoma", "D. Anaplastic thyroid carcinoma"],
+        "correctAnswer": "C. Medullary thyroid carcinoma",
         "userAnswer": null
     }
 ]
