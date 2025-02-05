@@ -3,11 +3,11 @@ body {
     background-color: #f8f9fa;
     color: #333;
     margin: 0;
-    padding: 0;
+    padding: 20px; /* Add padding to body to avoid content sticking to edges */
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start; /* Align to top to allow scrolling */
+    min-height: 100vh;
 }
 
 .container {
@@ -17,7 +17,9 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     width: 100%;
-    text-align: left; /* Left-align container content */
+    text-align: left;
+    max-height: 80vh; /* Limit container height */
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 #startContainer {
@@ -30,7 +32,7 @@ body {
 }
 
 #question {
-    text-align: left; /* Left-align question text */
+    text-align: left;
     margin-bottom: 20px;
     font-size: 18px;
 }
@@ -38,24 +40,24 @@ body {
 #options {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Left-align options */
+    align-items: flex-start;
     gap: 10px;
 }
 
 .option-button {
     padding: 10px;
-    width: 100%; /* Full width for options */
+    width: 100%;
     border: 2px solid #ddd;
     border-radius: 8px;
     background-color: white;
     color: black;
     cursor: pointer;
     transition: 0.3s;
-    text-align: left; /* Left-align option text */
+    text-align: left;
 }
 
 .option-button:hover {
-    background-color: #f1f1f1; /* Lighter hover color */
+    background-color: #f1f1f1;
     border-color: #0056b3;
 }
 
@@ -69,7 +71,7 @@ body {
     font-weight: bold;
     color: #d9534f;
     margin-bottom: 20px;
-    text-align: center; /* Center the timer */
+    text-align: center;
 }
 
 .hidden {
@@ -81,10 +83,10 @@ body {
 }
 
 #score {
-    font-size: 28px; /* Larger score text */
+    font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #007bff; /* Blue color for score */
+    color: #007bff;
 }
 
 .question-result {
