@@ -1,20 +1,62 @@
 [
     {
-        "question": "What is 2 + 2?",
-        "options": ["A. 1", "B. 2", "C. 3", "D. 4"],
-        "correctAnswer": "D. 4",
+        "question": "What is the most common cause of acute appendicitis?",
+        "options": ["A. Viral infection", "B. Faecolith", "C. Worm infestation", "D. Lymphoid hyperplasia"],
+        "correctAnswer": "B. Faecolith",
         "userAnswer": null
     },
     {
-        "question": "What is the capital of France?",
-        "options": ["A. London", "B. Paris", "C. Berlin", "D. Madrid"],
-        "correctAnswer": "B. Paris",
+        "question": "What is the preferred initial treatment for a patient with tension pneumothorax?",
+        "options": ["A. Needle decompression", "B. Chest tube placement", "C. Oxygen therapy", "D. Surgery"],
+        "correctAnswer": "A. Needle decompression",
         "userAnswer": null
     },
     {
-        "question": "Which is the largest planet in our Solar System?",
-        "options": ["A. Earth", "B. Mars", "C. Venus", "D. Jupiter"],
-        "correctAnswer": "D. Jupiter",
+        "question": "Which of the following is a feature of intestinal obstruction?",
+        "options": ["A. Hematemesis", "B. Colicky abdominal pain", "C. Jaundice", "D. Dysphagia"],
+        "correctAnswer": "B. Colicky abdominal pain",
+        "userAnswer": null
+    },
+    {
+        "question": "Which hernia is located below the inguinal ligament?",
+        "options": ["A. Direct inguinal hernia", "B. Indirect inguinal hernia", "C. Femoral hernia", "D. Epigastric hernia"],
+        "correctAnswer": "C. Femoral hernia",
+        "userAnswer": null
+    },
+    {
+        "question": "What is the hallmark finding in acute mesenteric ischemia?",
+        "options": ["A. Severe abdominal pain out of proportion to physical findings", "B. Guarding and rigidity", "C. Jaundice", "D. Ascites"],
+        "correctAnswer": "A. Severe abdominal pain out of proportion to physical findings",
+        "userAnswer": null
+    },
+    {
+        "question": "What is the most common site of carcinoma in the colon?",
+        "options": ["A. Cecum", "B. Ascending colon", "C. Rectosigmoid colon", "D. Transverse colon"],
+        "correctAnswer": "C. Rectosigmoid colon",
+        "userAnswer": null
+    },
+    {
+        "question": "What is the classic triad of symptoms in cholangitis (Charcot’s triad)?",
+        "options": ["A. Fever, jaundice, abdominal pain", "B. Jaundice, vomiting, dyspepsia", "C. Abdominal pain, weight loss, diarrhea", "D. Fever, dysphagia, nausea"],
+        "correctAnswer": "A. Fever, jaundice, abdominal pain",
+        "userAnswer": null
+    },
+    {
+        "question": "Which of the following is true about basal cell carcinoma?",
+        "options": ["A. Commonly metastasizes", "B. Occurs in sun-protected areas", "C. Has a pearly appearance", "D. Is primarily treated with chemotherapy"],
+        "correctAnswer": "C. Has a pearly appearance",
+        "userAnswer": null
+    },
+    {
+        "question": "What is the best imaging modality for diagnosing a biliary obstruction?",
+        "options": ["A. Plain X-ray", "B. Ultrasound", "C. CT scan", "D. MRI"],
+        "correctAnswer": "B. Ultrasound",
+        "userAnswer": null
+    },
+    {
+        "question": "What is the first-line treatment for a bleeding duodenal ulcer?",
+        "options": ["A. Endoscopic therapy", "B. Surgery", "C. Proton pump inhibitors", "D. Angiographic embolization"],
+        "correctAnswer": "A. Endoscopic therapy",
         "userAnswer": null
     }
 ]
