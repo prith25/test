@@ -48,10 +48,7 @@ function loadQuestion() {
         ${question.options
             .map(
                 (option, index) =>
-                    `<div>
-                        <input type="radio" name="answer" id="option${index}" value="${option[0]}">
-                        <label for="option${index}">${option}</label>
-                    </div>`
+                    `<button class="option-btn" onclick="selectAnswer('${option}', '${index}')">${option}</button>`
             )
             .join("")}
     `;
@@ -71,14 +68,17 @@ function startTimer() {
     }, 1000);
 }
 
+function selectAnswer(optionText, index) {
+    questions[currentQuestionIndex].userAnswer = optionText;
+    document.querySelectorAll(".option-btn").forEach((btn, i) => {
+        btn.style.background = i == index ? "#16a085" : "#1abc9c";
+    });
+}
+
 function handleNextQuestion() {
-    const selectedOption = document.querySelector('input[name="answer"]:checked');
-    if (selectedOption) {
-        questions[currentQuestionIndex].userAnswer = selectedOption.value;
-        if (selectedOption.value === questions[currentQuestionIndex].correctAnswer) {
-            userScore++;
-        }
-    }
+    const question = questions[currentQuestionIndex];
+    if (!question.userAnswer) question.userAnswer = "Not Answered";
+
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
         loadQuestion();
@@ -92,7 +92,8 @@ function handleNextQuestion() {
 function showResult() {
     testSection.classList.add("hidden");
     resultSection.classList.remove("hidden");
-    scoreElement.textContent = `${userScore} / ${questions.length}`;
+    const correctCount = questions.filter((q) => q.userAnswer === q.options[q.correctAnswer]).length;
+    scoreElement.textContent = `${correctCount} / ${questions.length}`;
 }
 
 function showAllQuestions() {
@@ -102,7 +103,7 @@ function showAllQuestions() {
                 `<div>
                     <h3>Q${index + 1}: ${q.question}</h3>
                     <p>Your Answer: ${q.userAnswer || "Not Answered"}</p>
-                    <p>Correct Answer: ${q.correctAnswer}</p>
+                    <p>Correct Answer: ${q.options[q.correctAnswer]}</p>
                 </div>`
         )
         .join("");
