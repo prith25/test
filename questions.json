@@ -1,0 +1,20 @@
+[
+    {
+        "question": "What is 2 + 2?",
+        "options": ["A. 1", "B. 2", "C. 3", "D. 4"],
+        "correctAnswer": "D",
+        "userAnswer": null
+    },
+    {
+        "question": "What is the capital of France?",
+        "options": ["A. Berlin", "B. Paris", "C. Madrid", "D. Rome"],
+        "correctAnswer": "B",
+        "userAnswer": null
+    },
+    {
+        "question": "Which is the largest planet in our Solar System?",
+        "options": ["A. Earth", "B. Mars", "C. Jupiter", "D. Saturn"],
+        "correctAnswer": "C",
+        "userAnswer": null
+    }
+]
