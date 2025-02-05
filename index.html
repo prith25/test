@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCQ Test with Timer</title>
+    <title>MCQ Test</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>MCQ Test</h1>
+            <h1>✨ MCQ Test Application ✨</h1>
         </div>
         <div id="config" class="config">
-            <label for="timer">Set Timer (seconds per question):</label>
-            <select id="timer">
-                <option value="60">60</option>
-                <option value="100">100</option>
-                <option value="120">120</option>
+            <label for="timer" class="timer-label">Set Timer (seconds per question):</label>
+            <select id="timer" class="timer-dropdown">
+                <option value="60">60 seconds</option>
+                <option value="100">100 seconds</option>
+                <option value="120">120 seconds</option>
             </select>
-            <button id="startTest">Start Test</button>
+            <button id="startTest" class="start-btn">Start Test</button>
         </div>
         <div id="test" class="test hidden">
-            <div class="timer">Time Left: <span id="timeLeft">60</span>s</div>
+            <div class="timer">⏳ Time Left: <span id="timeLeft">60</span>s</div>
             <div id="questionContainer" class="question-container"></div>
-            <button id="nextQuestion" class="hidden">Next Question</button>
+            <button id="nextQuestion" class="hidden next-btn">Next Question</button>
         </div>
         <div id="result" class="result hidden">
             <h2>Your Score: <span id="score"></span></h2>
-            <button id="viewQuestions">View All Questions with Answers</button>
+            <button id="viewQuestions" class="view-questions-btn">View All Questions with Answers</button>
             <div id="answers" class="answers hidden"></div>
         </div>
     </div>
