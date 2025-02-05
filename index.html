@@ -4,39 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MCQ Test</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Start Page -->
-    <div id="startPage" class="page">
-        <div class="container">
-            <h1>MCQ Test</h1>
-            <label for="timer" class="timer-label">Set Timer (seconds per question):</label>
-            <select id="timer" class="timer-dropdown">
-                <option value="60">60 seconds</option>
-                <option value="100">100 seconds</option>
-                <option value="120">120 seconds</option>
-            </select>
-            <button id="startTest" class="btn">Start Test</button>
-        </div>
+    <div id="startContainer">
+        <h1>Welcome to the MCQ Test</h1>
+        <label for="timerDropdown">Select Timer:</label>
+        <select id="timerDropdown">
+            <option value="60">60 seconds</option>
+            <option value="100">100 seconds</option>
+            <option value="120">120 seconds</option>
+        </select>
+        <button id="startButton">Start Test</button>
     </div>
 
-    <!-- Question Page -->
-    <div id="questionPage" class="page hidden">
-        <div class="container">
-            <div class="timer">⏳ Time Left: <span id="timeLeft">60</span>s</div>
-            <div id="questionContainer" class="question-container"></div>
-            <button id="nextQuestion" class="btn hidden">Next Question</button>
-        </div>
+    <div id="questionContainer">
+        <div id="timer"></div>
+        <h2 id="question"></h2>
+        <div id="options"></div>
+        <button id="nextButton">Next Question</button>
     </div>
 
-    <!-- Result Page -->
-    <div id="resultPage" class="page hidden">
-        <div class="container">
-            <h2>Your Score: <span id="score"></span></h2>
-            <button id="viewQuestions" class="btn">View All Questions with Answers</button>
-            <div id="answers" class="answers hidden"></div>
-        </div>
+    <div id="resultContainer">
+        <h1>Test Results</h1>
+        <p id="score"></p>
+        <button onclick="showAllQuestions()">View All Questions with Answers</button>
+        <div id="answersContainer" class="hidden"></div>
     </div>
 
     <script src="script.js"></script>
