@@ -17,7 +17,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     width: 100%;
-    text-align: center;
+    text-align: left; /* Left-align container content */
 }
 
 #startContainer {
@@ -30,32 +30,33 @@ body {
 }
 
 #question {
-    text-align: left;
+    text-align: left; /* Left-align question text */
     margin-bottom: 20px;
+    font-size: 18px;
 }
 
 #options {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Left-align options */
     gap: 10px;
 }
 
 .option-button {
     padding: 10px;
-    width: auto;
-    min-width: 200px;
+    width: 100%; /* Full width for options */
     border: 2px solid #ddd;
     border-radius: 8px;
     background-color: white;
-    color: black; /* Ensure text is visible */
+    color: black;
     cursor: pointer;
     transition: 0.3s;
-    text-align: center;
+    text-align: left; /* Left-align option text */
 }
 
 .option-button:hover {
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: #f1f1f1; /* Lighter hover color */
+    border-color: #0056b3;
 }
 
 .option-button.selected {
@@ -68,6 +69,7 @@ body {
     font-weight: bold;
     color: #d9534f;
     margin-bottom: 20px;
+    text-align: center; /* Center the timer */
 }
 
 .hidden {
@@ -76,6 +78,13 @@ body {
 
 #resultContainer {
     text-align: left;
+}
+
+#score {
+    font-size: 28px; /* Larger score text */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #007bff; /* Blue color for score */
 }
 
 .question-result {
