@@ -4,30 +4,54 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
     text-align: center;
 }
 
 #startContainer {
-    margin-top: 50px;
+    display: block;
 }
 
 #questionContainer,
 #resultContainer {
     display: none;
-    margin-top: 20px;
+}
+
+#question {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .option-button {
-    display: block;
-    margin: 10px auto;
-    padding: 15px;
-    width: 60%;
+    padding: 10px;
+    width: auto;
+    min-width: 200px;
     border: 2px solid #ddd;
     border-radius: 8px;
     background-color: white;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: black; /* Ensure text is visible */
     cursor: pointer;
     transition: 0.3s;
+    text-align: center;
 }
 
 .option-button:hover {
@@ -40,14 +64,10 @@ body {
 }
 
 #timer {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     color: #d9534f;
     margin-bottom: 20px;
-}
-
-h1, h3 {
-    margin: 20px;
 }
 
 .hidden {
@@ -55,16 +75,7 @@ h1, h3 {
 }
 
 #resultContainer {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-#answersContainer {
-    margin-top: 20px;
+    text-align: left;
 }
 
 .question-result {
@@ -94,6 +105,7 @@ button {
     color: white;
     cursor: pointer;
     transition: 0.3s;
+    margin-top: 20px;
 }
 
 button:hover {
