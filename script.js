@@ -1,24 +1,18 @@
 let questions = [];
 let currentQuestionIndex = 0;
-let timer = 60;
-let timerInterval;
 let userScore = 0;
+let timer = null;
 
-// Elements
-const startPage = document.getElementById("startPage");
-const questionPage = document.getElementById("questionPage");
-const resultPage = document.getElementById("resultPage");
+const timerDropdown = document.getElementById("timerDropdown");
+const startButton = document.getElementById("startButton");
 const questionContainer = document.getElementById("questionContainer");
-const timeLeft = document.getElementById("timeLeft");
-const nextButton = document.getElementById("nextQuestion");
-const scoreElement = document.getElementById("score");
-const answersContainer = document.getElementById("answers");
+const questionElement = document.getElementById("question");
+const optionsContainer = document.getElementById("options");
+const nextButton = document.getElementById("nextButton");
+const resultContainer = document.getElementById("resultContainer");
+const answersContainer = document.getElementById("answersContainer");
 
-document.getElementById("startTest").addEventListener("click", startTest);
-nextButton.addEventListener("click", handleNextQuestion);
-document.getElementById("viewQuestions").addEventListener("click", showAllQuestions);
-
-async function loadQuestions() {
+async function fetchQuestions() {
     try {
         const response = await fetch("questions.json");
         questions = await response.json();
@@ -28,101 +22,108 @@ async function loadQuestions() {
 }
 
 function startTest() {
-    loadQuestions().then(() => {
-        if (questions.length === 0) return;
-        timer = parseInt(document.getElementById("timer").value);
-        timeLeft.textContent = timer;
-        showPage("questionPage");
-        loadQuestion();
-        startTimer();
-    });
+    const selectedTime = parseInt(timerDropdown.value);
+    if (isNaN(selectedTime)) {
+        alert("Please select a timer value.");
+        return;
+    }
+    startButton.style.display = "none";
+    timerDropdown.style.display = "none";
+    questionContainer.style.display = "block";
+    loadQuestion();
+    startTimer(selectedTime);
 }
 
 function loadQuestion() {
     const question = questions[currentQuestionIndex];
-    questionContainer.innerHTML = `
-        <h2>${question.question}</h2>
-        ${question.options
-            .map(
-                (option, index) =>
-                    `<button class="option-btn" onclick="selectAnswer(${index})" id="option-${index}">
-                        ${option}
-                    </button>`
-            )
-            .join("")}
-    `;
-    nextButton.textContent = currentQuestionIndex === questions.length - 1 ? "Submit" : "Next Question";
-    nextButton.classList.remove("hidden");
+    questionElement.textContent = question.question;
+    optionsContainer.innerHTML = "";
+    question.options.forEach((option) => {
+        const button = document.createElement("button");
+        button.textContent = option;
+        button.className = "option-button";
+        button.onclick = () => {
+            question.userAnswer = option; // Save the selected option as the user's answer
+            highlightSelected(button);
+        };
+        optionsContainer.appendChild(button);
+    });
 }
 
-function startTimer() {
-    clearInterval(timerInterval);
-    timeLeft.textContent = timer;
-    timerInterval = setInterval(() => {
-        timeLeft.textContent -= 1;
-        if (timeLeft.textContent <= 0) {
-            clearInterval(timerInterval);
+function highlightSelected(selectedButton) {
+    const buttons = optionsContainer.querySelectorAll(".option-button");
+    buttons.forEach((btn) => btn.classList.remove("selected"));
+    selectedButton.classList.add("selected");
+}
+
+function startTimer(duration) {
+    let timeLeft = duration;
+    updateTimerDisplay(timeLeft);
+    timer = setInterval(() => {
+        timeLeft--;
+        updateTimerDisplay(timeLeft);
+        if (timeLeft === 0) {
+            clearInterval(timer);
             handleNextQuestion();
         }
     }, 1000);
 }
 
-function selectAnswer(index) {
-    questions[currentQuestionIndex].userAnswer = index; // Save index
-    document.querySelectorAll(".option-btn").forEach((btn, i) => {
-        btn.classList.toggle("selected", i === index); // Apply selected style
-    });
+function updateTimerDisplay(timeLeft) {
+    const timerElement = document.getElementById("timer");
+    timerElement.textContent = `Time Left: ${timeLeft}s`;
 }
 
 function handleNextQuestion() {
-    if (questions[currentQuestionIndex].userAnswer === undefined) {
-        questions[currentQuestionIndex].userAnswer = null; // Record as "Not Answered"
+    if (!questions[currentQuestionIndex].userAnswer) {
+        questions[currentQuestionIndex].userAnswer = "Not Answered";
     }
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
+    if (currentQuestionIndex < questions.length - 1) {
+        currentQuestionIndex++;
         loadQuestion();
-        startTimer();
+        resetTimer();
     } else {
-        clearInterval(timerInterval);
         showResult();
     }
 }
 
+function resetTimer() {
+    clearInterval(timer);
+    const selectedTime = parseInt(timerDropdown.value);
+    startTimer(selectedTime);
+}
+
 function showResult() {
+    clearInterval(timer);
+    questionContainer.style.display = "none";
+    resultContainer.style.display = "block";
+
     userScore = questions.reduce((score, question) => {
-        const isCorrect =
-            question.userAnswer !== null &&
-            question.options[question.userAnswer] === question.options[question.correctAnswer];
-        return score + (isCorrect ? 1 : 0);
+        return score + (question.userAnswer === question.correctAnswer ? 1 : 0);
     }, 0);
 
-    scoreElement.textContent = `${userScore} / ${questions.length}`;
-    showPage("resultPage");
+    document.getElementById(
+        "score"
+    ).textContent = `Your Score: ${userScore} / ${questions.length}`;
 }
 
 function showAllQuestions() {
     answersContainer.innerHTML = questions
-        .map(
-            (q, index) =>
-                `<div>
+        .map((q, index) => {
+            return `
+                <div>
                     <h3>Q${index + 1}: ${q.question}</h3>
                     <p>Your Answer: ${
-                        q.userAnswer !== null
-                            ? q.options[q.userAnswer]
-                            : "Not Answered"
+                        q.userAnswer ? q.userAnswer : "Not Answered"
                     }</p>
-                    <p>Correct Answer: ${q.options[q.correctAnswer]}</p>
-                </div>`
-        )
+                    <p>Correct Answer: ${q.correctAnswer}</p>
+                </div>`;
+        })
         .join("");
     answersContainer.classList.remove("hidden");
 }
 
-function showPage(pageId) {
-    document.querySelectorAll(".page").forEach((page) => {
-        page.classList.remove("active");
-        if (page.id === pageId) page.classList.add("active");
-    });
-}
+startButton.addEventListener("click", startTest);
+nextButton.addEventListener("click", handleNextQuestion);
 
-document.addEventListener("DOMContentLoaded", () => showPage("startPage"));
+fetchQuestions();
