@@ -1,13 +1,11 @@
-/* General Styling */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f8f9fa;
+    background: #f5f5f5;
     color: #333;
 }
 
-/* Page Layout */
 .page {
     display: none;
     justify-content: center;
@@ -19,87 +17,63 @@ body {
     display: flex;
 }
 
-/* Container */
 .container {
     width: 80%;
     max-width: 600px;
-    text-align: center;
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Buttons */
+h1, h2 {
+    text-align: center;
+}
+
+.timer {
+    font-size: 18px;
+    color: #dc3545;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
 .btn {
-    display: inline-block;
-    margin: 20px 0;
-    padding: 15px 20px;
+    padding: 10px 20px;
     font-size: 16px;
     color: #fff;
     background: #007bff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s, transform 0.2s;
+    transition: background 0.3s;
+    margin: 20px 0;
 }
 
 .btn:hover {
     background: #0056b3;
-    transform: translateY(-2px);
-}
-
-/* Timer */
-.timer {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #dc3545;
-    font-weight: bold;
-}
-
-/* Question Container */
-.question-container {
-    text-align: left;
-    margin: 0 auto;
-}
-
-.question-container h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
 }
 
 .option-btn {
     display: block;
-    margin: 15px auto;
+    width: 100%;
     padding: 15px;
+    margin: 10px 0;
     background: #fff;
     border: 2px solid #ddd;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 8px;
+    text-align: left;
     font-size: 16px;
     cursor: pointer;
-    width: 100%;
-    text-align: left; /* Left-aligned */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: border-color 0.3s, box-shadow 0.3s;
+    transition: all 0.3s;
 }
 
 .option-btn:hover {
     border-color: #007bff;
-    box-shadow: 0px 4px 15px rgba(0, 0, 255, 0.2);
 }
 
 .option-btn.selected {
-    border-color: rgba(173, 216, 230, 0.7); /* Light blue neon outline */
-    box-shadow: 0px 0px 15px rgba(173, 216, 230, 0.7); /* Subtle neon glow */
-}
-
-/* Result Page */
-.answers div {
-    margin-bottom: 15px;
-    padding: 15px;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    border-color: #0ff;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7); /* Neon glow */
 }
