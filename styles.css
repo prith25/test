@@ -1,79 +1,50 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
     margin: 0;
     padding: 0;
-    background: #f5f5f5;
-    color: #333;
+    text-align: center;
 }
 
-.page {
+#questionContainer,
+#resultContainer {
     display: none;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
-.page.active {
-    display: flex;
-}
-
-.container {
-    width: 80%;
-    max-width: 600px;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-h1, h2 {
-    text-align: center;
-}
-
-.timer {
-    font-size: 18px;
-    color: #dc3545;
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin: 20px 0;
-}
-
-.btn:hover {
-    background: #0056b3;
-}
-
-.option-btn {
+.option-button {
     display: block;
-    width: 100%;
+    margin: 10px auto;
     padding: 15px;
-    margin: 10px 0;
-    background: #fff;
+    width: 60%;
     border: 2px solid #ddd;
     border-radius: 8px;
-    text-align: left;
-    font-size: 16px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s;
+    transition: 0.3s;
 }
 
-.option-btn:hover {
-    border-color: #007bff;
+.option-button:hover {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.option-btn.selected {
-    border-color: #0ff;
-    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7); /* Neon glow */
+.option-button.selected {
+    border-color: #0056b3; /* Darker neon blue outline */
+    box-shadow: 0 0 10px #0056b3; /* Darker neon blue shadow */
+}
+
+#timer {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d9534f;
+    margin-bottom: 20px;
+}
+
+h1, h3 {
+    margin: 20px;
+}
+
+.hidden {
+    display: none;
 }
