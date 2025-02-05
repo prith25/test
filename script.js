@@ -4,12 +4,13 @@ let timer = 60; // Default timer
 let timerInterval;
 let userScore = 0;
 
-const configSection = document.getElementById("config");
-const testSection = document.getElementById("test");
-const resultSection = document.getElementById("result");
+// Elements
+const startPage = document.getElementById("startPage");
+const questionPage = document.getElementById("questionPage");
+const resultPage = document.getElementById("resultPage");
 const questionContainer = document.getElementById("questionContainer");
-const nextButton = document.getElementById("nextQuestion");
 const timeLeft = document.getElementById("timeLeft");
+const nextButton = document.getElementById("nextQuestion");
 const scoreElement = document.getElementById("score");
 const answersContainer = document.getElementById("answers");
 
@@ -20,25 +21,21 @@ document.getElementById("viewQuestions").addEventListener("click", showAllQuesti
 async function loadQuestions() {
     try {
         const response = await fetch("questions.json");
-        if (!response.ok) throw new Error("Failed to load questions.");
         questions = await response.json();
     } catch (error) {
-        console.error("Error loading questions:", error);
         alert("Failed to load questions. Please check the JSON file.");
     }
 }
 
-async function startTest() {
-    await loadQuestions();
-    if (questions.length === 0) return; // Stop if no questions are loaded
-    timer = parseInt(document.getElementById("timer").value);
-    timeLeft.textContent = timer;
-    currentQuestionIndex = 0;
-    userScore = 0;
-    configSection.classList.add("hidden");
-    testSection.classList.remove("hidden");
-    loadQuestion();
-    startTimer();
+function startTest() {
+    loadQuestions().then(() => {
+        if (questions.length === 0) return;
+        timer = parseInt(document.getElementById("timer").value);
+        timeLeft.textContent = timer;
+        showPage("questionPage");
+        loadQuestion();
+        startTimer();
+    });
 }
 
 function loadQuestion() {
@@ -48,7 +45,7 @@ function loadQuestion() {
         ${question.options
             .map(
                 (option, index) =>
-                    `<button class="option-btn" onclick="selectAnswer('${option}', '${index}')">${option}</button>`
+                    `<button class="option-btn" onclick="selectAnswer('${option}', ${index})">${option}</button>`
             )
             .join("")}
     `;
@@ -57,8 +54,8 @@ function loadQuestion() {
 }
 
 function startTimer() {
-    timeLeft.textContent = timer;
     clearInterval(timerInterval);
+    timeLeft.textContent = timer;
     timerInterval = setInterval(() => {
         timeLeft.textContent -= 1;
         if (timeLeft.textContent <= 0) {
@@ -68,17 +65,17 @@ function startTimer() {
     }, 1000);
 }
 
-function selectAnswer(optionText, index) {
-    questions[currentQuestionIndex].userAnswer = optionText;
+function selectAnswer(option, index) {
+    questions[currentQuestionIndex].userAnswer = option; // Save the user's answer immediately
     document.querySelectorAll(".option-btn").forEach((btn, i) => {
-        btn.style.background = i == index ? "#16a085" : "#1abc9c";
+        btn.classList.toggle("selected", i === index);
     });
 }
 
 function handleNextQuestion() {
-    const question = questions[currentQuestionIndex];
-    if (!question.userAnswer) question.userAnswer = "Not Answered";
-
+    if (!questions[currentQuestionIndex].userAnswer) {
+        questions[currentQuestionIndex].userAnswer = "Not Answered";
+    }
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
         loadQuestion();
@@ -90,10 +87,11 @@ function handleNextQuestion() {
 }
 
 function showResult() {
-    testSection.classList.add("hidden");
-    resultSection.classList.remove("hidden");
-    const correctCount = questions.filter((q) => q.userAnswer === q.options[q.correctAnswer]).length;
+    const correctCount = questions.filter(
+        (q) => q.userAnswer === q.options[q.correctAnswer]
+    ).length;
     scoreElement.textContent = `${correctCount} / ${questions.length}`;
+    showPage("resultPage");
 }
 
 function showAllQuestions() {
@@ -109,3 +107,12 @@ function showAllQuestions() {
         .join("");
     answersContainer.classList.remove("hidden");
 }
+
+function showPage(pageId) {
+    document.querySelectorAll(".page").forEach((page) => {
+        page.classList.remove("active");
+        if (page.id === pageId) page.classList.add("active");
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => showPage("startPage"));
