@@ -43,7 +43,7 @@ function loadQuestion() {
         button.textContent = option;
         button.className = "option-button";
         button.onclick = () => {
-            question.userAnswer = option; // Save the selected option as the user's answer
+            question.userAnswer = option; // Save the full option as the user's answer
             highlightSelected(button);
         };
         optionsContainer.appendChild(button);
@@ -98,8 +98,11 @@ function showResult() {
     questionContainer.style.display = "none";
     resultContainer.style.display = "block";
 
+    // Calculate score
     userScore = questions.reduce((score, question) => {
-        return score + (question.userAnswer === question.correctAnswer ? 1 : 0);
+        const userAnswerLetter = question.userAnswer ? question.userAnswer.split(".")[0].trim() : null;
+        const correctAnswerLetter = question.correctAnswer.split(".")[0].trim();
+        return score + (userAnswerLetter === correctAnswerLetter ? 1 : 0);
     }, 0);
 
     document.getElementById(
@@ -110,12 +113,11 @@ function showResult() {
 function showAllQuestions() {
     answersContainer.innerHTML = questions
         .map((q, index) => {
+            const isCorrect = q.userAnswer ? q.userAnswer.split(".")[0].trim() === q.correctAnswer.split(".")[0].trim() : false;
             return `
-                <div>
+                <div class="question-result ${isCorrect ? "correct" : "incorrect"}">
                     <h3>Q${index + 1}: ${q.question}</h3>
-                    <p>Your Answer: ${
-                        q.userAnswer ? q.userAnswer : "Not Answered"
-                    }</p>
+                    <p>Your Answer: ${q.userAnswer ? q.userAnswer : "Not Answered"}</p>
                     <p>Correct Answer: ${q.correctAnswer}</p>
                 </div>`;
         })
