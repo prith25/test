@@ -1,6 +1,6 @@
 let questions = [];
 let currentQuestionIndex = 0;
-let timer = 60; // Default timer
+let timer = 60;
 let timerInterval;
 let userScore = 0;
 
@@ -45,7 +45,7 @@ function loadQuestion() {
         ${question.options
             .map(
                 (option, index) =>
-                    `<button class="option-btn" onclick="selectAnswer('${option}', ${index})">${option}</button>`
+                    `<button class="option-btn" onclick="selectAnswer('${index}')">${option}</button>`
             )
             .join("")}
     `;
@@ -65,15 +65,15 @@ function startTimer() {
     }, 1000);
 }
 
-function selectAnswer(option, index) {
-    questions[currentQuestionIndex].userAnswer = option; // Save the user's answer immediately
+function selectAnswer(index) {
+    questions[currentQuestionIndex].userAnswer = parseInt(index); // Save index
     document.querySelectorAll(".option-btn").forEach((btn, i) => {
         btn.classList.toggle("selected", i === index);
     });
 }
 
 function handleNextQuestion() {
-    if (!questions[currentQuestionIndex].userAnswer) {
+    if (questions[currentQuestionIndex].userAnswer === undefined) {
         questions[currentQuestionIndex].userAnswer = "Not Answered";
     }
     currentQuestionIndex++;
@@ -87,10 +87,13 @@ function handleNextQuestion() {
 }
 
 function showResult() {
-    const correctCount = questions.filter(
-        (q) => q.userAnswer === q.options[q.correctAnswer]
+    userScore = questions.filter(
+        (q) =>
+            q.userAnswer !== "Not Answered" &&
+            q.options[q.userAnswer] === q.options[q.correctAnswer]
     ).length;
-    scoreElement.textContent = `${correctCount} / ${questions.length}`;
+
+    scoreElement.textContent = `${userScore} / ${questions.length}`;
     showPage("resultPage");
 }
 
@@ -100,7 +103,11 @@ function showAllQuestions() {
             (q, index) =>
                 `<div>
                     <h3>Q${index + 1}: ${q.question}</h3>
-                    <p>Your Answer: ${q.userAnswer || "Not Answered"}</p>
+                    <p>Your Answer: ${
+                        q.userAnswer !== "Not Answered"
+                            ? q.options[q.userAnswer]
+                            : "Not Answered"
+                    }</p>
                     <p>Correct Answer: ${q.options[q.correctAnswer]}</p>
                 </div>`
         )
