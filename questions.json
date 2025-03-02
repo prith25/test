@@ -1,72 +1,277 @@
 [
-    {
-        "question": "A 60-year-old man presents with weight loss, dysphagia, and a palpable supraclavicular lymph node. Esophagogastroduodenoscopy reveals a mass in the lower esophagus. Which lymph node metastasis is most likely?",
-        "options": ["A. Virchow’s node", "B. Celiac lymph node", "C. Para-aortic lymph node", "D. Axillary lymph node"],
-        "correctAnswer": "A. Virchow’s node",
-        "userAnswer": null
-    },
-    {
-        "question": "Which of the following is NOT a component of Ranson's criteria for assessing the severity of acute pancreatitis?",
-        "options": ["A. Age >55 years", "B. White blood cell count >16,000/mm³", "C. Serum calcium <8 mg/dL", "D. Serum amylase >1,000 IU/L"],
-        "correctAnswer": "D. Serum amylase >1,000 IU/L",
-        "userAnswer": null
-    },
-    {
-        "question": "In a patient with upper gastrointestinal bleeding due to varices, what is the best method to prevent rebleeding after endoscopic therapy?",
-        "options": ["A. Proton pump inhibitors", "B. Octreotide infusion", "C. Transjugular intrahepatic portosystemic shunt (TIPS)", "D. Beta-blockers"],
-        "correctAnswer": "C. Transjugular intrahepatic portosystemic shunt (TIPS)",
-        "userAnswer": null
-    },
-    {
-        "question": "A 35-year-old male presents with abdominal pain, fever, and jaundice. Imaging reveals a stone in the common bile duct. Which of the following procedures is the best initial management?",
-        "options": ["A. Open choledocholithotomy", "B. Laparoscopic cholecystectomy", "C. Endoscopic retrograde cholangiopancreatography (ERCP)", "D. Percutaneous transhepatic cholangiography"],
-        "correctAnswer": "C. Endoscopic retrograde cholangiopancreatography (ERCP)",
-        "userAnswer": null
-    },
-    {
-        "question": "A 45-year-old man undergoes surgery for pheochromocytoma. Which of the following is the most critical preoperative step?",
-        "options": ["A. Hydration with normal saline", "B. Administration of beta-blockers", "C. Alpha-adrenergic blockade", "D. Corticosteroid supplementation"],
-        "correctAnswer": "C. Alpha-adrenergic blockade",
-        "userAnswer": null
-    },
-    {
-        "question": "Which of the following is the most reliable indicator of ischemia during bowel resection for mesenteric ischemia?",
-        "options": ["A. Lack of peristalsis", "B. Cyanotic appearance of the bowel", "C. Absence of Doppler signals in the mesenteric vessels", "D. Mucosal bleeding upon palpation"],
-        "correctAnswer": "C. Absence of Doppler signals in the mesenteric vessels",
-        "userAnswer": null
-    },
-    {
-        "question": "Which of the following statements is true regarding gallbladder carcinoma?",
-        "options": [
-            "A. It is more common in males than females.",
-            "B. Porcelain gallbladder increases the risk of gallbladder carcinoma.",
-            "C. Adenocarcinoma is the rarest histological subtype.",
-            "D. Gallbladder carcinoma is associated with H. pylori infection."
-        ],
-        "correctAnswer": "B. Porcelain gallbladder increases the risk of gallbladder carcinoma.",
-        "userAnswer": null
-    },
-    {
-        "question": "What is the most common presentation of a gastric volvulus?",
-        "options": [
-            "A. Severe epigastric pain with coffee-ground emesis",
-            "B. Dysphagia with hematemesis",
-            "C. Triad of severe pain, retching without vomiting, and inability to pass an NG tube",
-            "D. Abdominal distension and constipation"
-        ],
-        "correctAnswer": "C. Triad of severe pain, retching without vomiting, and inability to pass an NG tube",
-        "userAnswer": null
-    },
-    {
-        "question": "A patient develops hypotension and tachycardia 2 hours after undergoing a splenectomy. Which of the following is the most likely cause?",
-        "options": ["A. Pulmonary embolism", "B. Intra-abdominal hemorrhage", "C. Post-splenectomy sepsis", "D. Hemolytic anemia"],
-        "correctAnswer": "B. Intra-abdominal hemorrhage",
-        "userAnswer": null
-    },
-    {
-        "question": "Which type of thyroid cancer is associated with the RET proto-oncogene mutation and often presents with elevated calcitonin levels?",
-        "options": ["A. Papillary thyroid carcinoma", "B. Follicular thyroid carcinoma", "C. Medullary thyroid carcinoma", "D. Anaplastic thyroid carcinoma"],
-        "correctAnswer": "C. Medullary thyroid carcinoma",
-        "userAnswer": null
-    }
+  {
+    "question": "A 3-month-old preterm infant (born at 28 weeks) on home oxygen develops sudden respiratory distress with tachypnea, retractions, and hypoxemia. Chest X-ray shows hyperinflation and atelectasis. Which is the most likely diagnosis?",
+    "options": [
+      "A. Bronchopulmonary dysplasia",
+      "B. Respiratory syncytial virus bronchiolitis",
+      "C. Congenital diaphragmatic hernia",
+      "D. Tracheoesophageal fistula"
+    ],
+    "correctAnswer": "A. Bronchopulmonary dysplasia",
+    "userAnswer": null
+  },
+  {
+    "question": "A 2-year-old with a 3-day history of barking cough and inspiratory stridor develops increased work of breathing at night. Which management is most appropriate?",
+    "options": [
+      "A. Nebulized epinephrine + oral dexamethasone",
+      "B. IV ampicillin + chest physiotherapy",
+      "C. Emergency tracheostomy",
+      "D. Inhaled salbutamol + oxygen therapy"
+    ],
+    "correctAnswer": "A. Nebulized epinephrine + oral dexamethasone",
+    "userAnswer": null
+  },
+  {
+    "question": "A 6-month-old with recurrent pneumonia, failure to thrive, and steatorrhea has a sweat chloride test of 85 mEq/L. Which genetic mutation is most likely?",
+    "options": [
+      "A. CFTR gene",
+      "B. ABCA3 gene",
+      "C. SERPINA1 gene",
+      "D. FOXP3 gene"
+    ],
+    "correctAnswer": "A. CFTR gene",
+    "userAnswer": null
+  },
+  {
+    "question": "A 5-year-old with sudden-onset choking during play develops unilateral wheezing and decreased air entry on the right. Chest X-ray shows hyperlucency on expiration. What is the definitive management?",
+    "options": [
+      "A. Rigid bronchoscopy",
+      "B. Heimlich maneuver",
+      "C. Nebulized albuterol",
+      "D. High-dose corticosteroids"
+    ],
+    "correctAnswer": "A. Rigid bronchoscopy",
+    "userAnswer": null
+  },
+  {
+    "question": "A 4-year-old with fever, drooling, and tripod positioning has a lateral neck X-ray showing thumbprinting. What is the immediate next step?",
+    "options": [
+      "A. Secure airway in OT under anesthesia",
+      "B. IV ceftriaxone and vancomycin",
+      "C. Nebulized epinephrine",
+      "D. CT scan of the neck"
+    ],
+    "correctAnswer": "A. Secure airway in OT under anesthesia",
+    "userAnswer": null
+  },
+  {
+    "question": "A 1-year-old with a 2-week history of paroxysmal coughing followed by a 'whoop' has lymphocytosis. Which antibiotic is recommended?",
+    "options": [
+      "A. Azithromycin",
+      "B. Amoxicillin",
+      "C. Cefotaxime",
+      "D. Doxycycline"
+    ],
+    "correctAnswer": "A. Azithromycin",
+    "userAnswer": null
+  },
+  {
+    "question": "A preterm neonate with grunting, nasal flaring, and retractions has a chest X-ray showing ground-glass appearance. Which treatment is definitive?",
+    "options": [
+      "A. Exogenous surfactant administration",
+      "B. Continuous positive airway pressure (CPAP)",
+      "C. High-frequency oscillatory ventilation",
+      "D. Inhaled nitric oxide"
+    ],
+    "correctAnswer": "A. Exogenous surfactant administration",
+    "userAnswer": null
+  },
+  {
+    "question": "A 7-year-old with poorly controlled asthma has recurrent hospitalizations. Spirometry shows FEV1/FVC ratio of 65% with reversibility. Which add-on therapy is most appropriate?",
+    "options": [
+      "A. Omalizumab (anti-IgE)",
+      "B. Oral prednisolone",
+      "C. Montelukast",
+      "D. Theophylline"
+    ],
+    "correctAnswer": "A. Omalizumab (anti-IgE)",
+    "userAnswer": null
+  },
+  {
+    "question": "A 3-year-old with a history of recurrent sinopulmonary infections has absent IgA on serum immunoelectrophoresis. Which respiratory complication is most likely?",
+    "options": [
+      "A. Bronchiectasis",
+      "B. Emphysema",
+      "C. Pulmonary embolism",
+      "D. Pneumothorax"
+    ],
+    "correctAnswer": "A. Bronchiectasis",
+    "userAnswer": null
+  },
+  {
+    "question": "A neonate with scaphoid abdomen, severe respiratory distress, and bowel sounds heard in the chest has a chest X-ray showing intestinal loops in the left hemithorax. What is the diagnosis?",
+    "options": [
+      "A. Congenital diaphragmatic hernia",
+      "B. Pneumothorax",
+      "C. Esophageal atresia",
+      "D. Congenital cystic adenomatoid malformation"
+    ],
+    "correctAnswer": "A. Congenital diaphragmatic hernia",
+    "userAnswer": null
+  },
+  {
+    "question": "A 2-month-old with inspiratory stridor that worsens in supine position and improves in prone position is diagnosed with laryngomalacia. Which finding is characteristic?",
+    "options": [
+      "A. Omega-shaped epiglottis",
+      "B. Subglottic stenosis",
+      "C. Tracheal web",
+      "D. Vocal cord paralysis"
+    ],
+    "correctAnswer": "A. Omega-shaped epiglottis",
+    "userAnswer": null
+  },
+  {
+    "question": "A 10-year-old with cystic fibrosis has a sudden onset of pleuritic chest pain and dyspnea. Chest X-ray shows a 30% pneumothorax. What is the immediate management?",
+    "options": [
+      "A. Insertion of a chest tube",
+      "B. Needle thoracocentesis",
+      "C. High-flow oxygen",
+      "D. Observation only"
+    ],
+    "correctAnswer": "A. Insertion of a chest tube",
+    "userAnswer": null
+  },
+  {
+    "question": "A 6-year-old with fever, cough, and a \"stony dull\" percussion note on the right lower chest has a chest X-ray showing a meniscus sign. What is the best intervention?",
+    "options": [
+      "A. Therapeutic thoracentesis",
+      "B. IV antibiotics",
+      "C. Bronchodilators",
+      "D. Chest physiotherapy"
+    ],
+    "correctAnswer": "A. Therapeutic thoracentesis",
+    "userAnswer": null
+  },
+  {
+    "question": "A 5-year-old with a history of Kartagener syndrome presents with chronic wet cough. Which ciliary abnormality is pathognomonic?",
+    "options": [
+      "A. Absent dynein arms",
+      "B. Microtubule duplication",
+      "C. Ciliary disorientation",
+      "D. Basal body defect"
+    ],
+    "correctAnswer": "A. Absent dynein arms",
+    "userAnswer": null
+  },
+  {
+    "question": "A 9-month-old with failure to thrive, clubbing, and recurrent Pseudomonas aeruginosa pneumonia is suspected to have cystic fibrosis. Which test confirms the diagnosis?",
+    "options": [
+      "A. Sweat chloride >60 mEq/L",
+      "B. Nasal nitric oxide measurement",
+      "C. Serum trypsinogen levels",
+      "D. Stool elastase"
+    ],
+    "correctAnswer": "A. Sweat chloride >60 mEq/L",
+    "userAnswer": null
+  },
+  {
+    "question": "A 4-year-old with acute respiratory distress after playing with toys has asymmetric breath sounds. Fluoroscopy shows mediastinal shift to the left during expiration. What is the diagnosis?",
+    "options": [
+      "A. Foreign body in the right main bronchus",
+      "B. Tension pneumothorax",
+      "C. Lobar pneumonia",
+      "D. Congenital lobar emphysema"
+    ],
+    "correctAnswer": "A. Foreign body in the right main bronchus",
+    "userAnswer": null
+  },
+  {
+    "question": "A 1-year-old with tachypnea, fever, and chest retractions has a chest X-ray showing patchy infiltrates. PCR is positive for RSV. What is the treatment?",
+    "options": [
+      "A. Supportive care + oxygen",
+      "B. Oral amoxicillin",
+      "C. Ribavirin",
+      "D. Inhaled corticosteroids"
+    ],
+    "correctAnswer": "A. Supportive care + oxygen",
+    "userAnswer": null
+  },
+  {
+    "question": "A 3-year-old with a history of repaired TOF develops exercise intolerance and cyanosis. Echocardiogram shows right ventricular hypertrophy. Which complication is most likely?",
+    "options": [
+      "A. Eisenmenger syndrome",
+      "B. Cor pulmonale",
+      "C. Pulmonary stenosis",
+      "D. Aortic dissection"
+    ],
+    "correctAnswer": "A. Eisenmenger syndrome",
+    "userAnswer": null
+  },
+  {
+    "question": "A preterm neonate on mechanical ventilation develops sudden desaturation and hypotension. Chest transillumination is positive. What is the immediate intervention?",
+    "options": [
+      "A. Needle thoracocentesis",
+      "B. Increase PEEP",
+      "C. Surfactant administration",
+      "D. IV fluid bolus"
+    ],
+    "correctAnswer": "A. Needle thoracocentesis",
+    "userAnswer": null
+  },
+  {
+    "question": "A 7-year-old with fever, night sweats, and hilar lymphadenopathy on X-ray has a Mantoux test induration of 15 mm. Which drug is contraindicated?",
+    "options": [
+      "A. Rifampin",
+      "B. Isoniazid",
+      "C. Ethambutol",
+      "D. Streptomycin"
+    ],
+    "correctAnswer": "D. Streptomycin",
+    "userAnswer": null
+  },
+  {
+    "question": "A 6-month-old with grunting, fever, and leukocytosis has a chest X-ray showing round consolidations with air bronchograms. Which pathogen is most likely?",
+    "options": [
+      "A. Streptococcus pneumoniae",
+      "B. Mycoplasma pneumoniae",
+      "C. Respiratory syncytial virus",
+      "D. Chlamydia trachomatis"
+    ],
+    "correctAnswer": "A. Streptococcus pneumoniae",
+    "userAnswer": null
+  },
+  {
+    "question": "A 2-year-old with chronic cough, digital clubbing, and foul-smelling stools has a chest CT showing bronchiectasis. Which test is diagnostic?",
+    "options": [
+      "A. Sweat chloride test",
+      "B. Serum IgE levels",
+      "C. Sputum culture",
+      "D. Lung biopsy"
+    ],
+    "correctAnswer": "A. Sweat chloride test",
+    "userAnswer": null
+  },
+  {
+    "question": "A 12-year-old with asthma develops severe respiratory acidosis (pH 7.20, PaCO2 65 mmHg) despite nebulized bronchodilators. What is the next step?",
+    "options": [
+      "A. IV magnesium sulfate + non-invasive ventilation",
+      "B. Intubation and mechanical ventilation",
+      "C. IV aminophylline",
+      "D. Subcutaneous epinephrine"
+    ],
+    "correctAnswer": "A. IV magnesium sulfate + non-invasive ventilation",
+    "userAnswer": null
+  },
+  {
+    "question": "A 5-year-old with unilateral wheezing and recurrent pneumonia has CT angiography showing an anomalous artery from the aorta supplying the left lower lobe. What is the diagnosis?",
+    "options": [
+      "A. Pulmonary sequestration",
+      "B. Congenital lobar emphysema",
+      "C. Bronchogenic cyst",
+      "D. Tracheomalacia"
+    ],
+    "correctAnswer": "A. Pulmonary sequestration",
+    "userAnswer": null
+  },
+  {
+    "question": "A 4-month-old with tachypnea, hypoxia, and a \"snowstorm\" appearance on chest X-ray is diagnosed with alveolar capillary dysplasia. What is the definitive treatment?",
+    "options": [
+      "A. Lung transplantation",
+      "B. Inhaled nitric oxide",
+      "C. High-dose steroids",
+      "D. ECMO"
+    ],
+    "correctAnswer": "A. Lung transplantation",
+    "userAnswer": null
+  }
 ]
